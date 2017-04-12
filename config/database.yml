@@ -1,0 +1,25 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  encoding: utf8
+  username: root
+  password: asd
+  host: localhost
+  reconnect: true
+  pool: 30
+
+development:
+  <<: *default
+  database: dummy/developement
+
+test:
+  <<: *default
+  database: dummy/test
+
+staging:
+  <<: *default
+  database: dummy/staging
+
+production:
+  <<: *default
+  database: dummy/production
